@@ -1,0 +1,26 @@
+{
+  "learn": { "technology": ["React", "CSS", "HTML", "Redux"] },
+  "read": [
+    {
+      "name": "A Visual Guide to NodeJS Streams",
+      "id": "98fujd",
+      "sourse": "medium",
+      "description": "",
+      "link": "https://blog.insiderattack.net/a-visual-guide-to-nodejs-streams-9d2d594a9bf5"
+    },
+    {
+      "name": "Why is NanoID Replacing UUID?",
+      "id": "98fuj343efdd",
+      "description": "",
+      "sourse": "medium",
+      "link": "https://blog.bitsrc.io/why-is-nanoid-replacing-uuid-1b5100e62ed2"
+    },
+    {
+      "name": "Migrate Your Multi-Page Application to a Single-Page Application",
+      "id": "98f3k3ujefdd",
+      "description": "You might find yourself in a world where you desperately want to move towards modern technologies, but you can’t see a path besides rebuilding the entire platform. The objective of this article is to convince you that there is a simple approach often overlooked.",
+      "sourse": "medium",
+      "link": "https://javascript.plainenglish.io/migrate-your-multi-page-application-to-a-single-page-application-a16863d6249f"
+    }
+  ]
+}
