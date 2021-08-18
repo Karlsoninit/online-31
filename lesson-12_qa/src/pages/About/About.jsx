@@ -3,12 +3,8 @@ import { useHistory, useLocation, useRouteMatch } from "react-router-dom";
 export default function About() {
   const history = useHistory();
   const location = useLocation();
-  //   const match = useRouteMatch();
 
-  //   console.log("history", history);
-  //     console.log("location", location);
-  //     console.log('match :>> ', match);
-
+  console.log("location :>> ", location);
   const handleGoBack = () => {
     if (location.state) {
       history.push(location.state.from);
@@ -17,6 +13,10 @@ export default function About() {
 
     history.push("/");
   };
+
+  //   const goBack = () => {
+  //     history.goBack();
+  //   };
 
   return (
     <div>

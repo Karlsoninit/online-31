@@ -20,6 +20,7 @@ export default function Menu() {
         >
           About
         </NavLink>
+        {/* <NavLink to="/about">About</NavLink> */}
       </MenuItem>
       <MenuItem>
         <NavLink to="/map">Map</NavLink>
