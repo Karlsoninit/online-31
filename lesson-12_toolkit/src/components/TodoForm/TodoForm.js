@@ -4,11 +4,10 @@ import { SubmitButton } from "../../ui/SubmitButton/SubmitButton";
 import { Form, InputBox } from "./TodoForm.styles";
 import { v4 as uuid } from "uuid";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../../redux/actions";
+import { notesSlice } from "../../redux/store";
 
 export const TodoForm = () => {
   const dispatch = useDispatch();
-
   const [todo, setTodo] = useState({
     learn: "",
     description: "",
@@ -16,7 +15,7 @@ export const TodoForm = () => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    dispatch(addTodo({ ...todo, id: uuid() }));
+    dispatch(notesSlice.actions.addNote({ ...todo, id: uuid() }));
   };
 
   const handleChange = (event) => {
