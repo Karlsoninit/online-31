@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 
 export const PlanningCard = ({
   description,
-  title,
+  learn,
   onHandleDeleteTask,
   id,
 }) => {
@@ -34,7 +34,7 @@ export const PlanningCard = ({
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {title}
+            {learn}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {description}

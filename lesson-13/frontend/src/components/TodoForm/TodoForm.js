@@ -3,11 +3,13 @@ import { Input } from "../../ui/Input/Input";
 import { SubmitButton } from "../../ui/SubmitButton/SubmitButton";
 import { Form, InputBox } from "./TodoForm.styles";
 import { v4 as uuid } from "uuid";
-import { useDispatch } from "react-redux";
-import { addTodo, postTodo } from "../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, postTodoOperation } from "../../redux/actions";
 
 export const TodoForm = () => {
   const dispatch = useDispatch();
+  const todos = useSelector((state) => state.todo);
+  const user = useSelector((state) => state.user);
 
   const [todo, setTodo] = useState({
     learn: "",
@@ -16,13 +18,21 @@ export const TodoForm = () => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    dispatch(addTodo(todo));
+    dispatch(postTodoOperation(todo));
   };
 
   const handleChange = (event) => {
     const { value, name } = event.target;
     setTodo({ ...todo, [name]: value });
   };
+
+  // if (todo.loader && user.loader) {
+  //   return <h1>Идет загрузка</h1>;
+  // }
+
+  // if (todo.loader || user.loader) {
+  //   return <h1>Идет загрузка</h1>;
+  // }
 
   return (
     <Form onSubmit={handleSubmit}>
