@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "learn": "Next js",
+      "description": "Video",
+      "id": 1
+    },
+    {
+      "learn": "Vue js",
+      "description": "course",
+      "id": 2
+    },
+    {
+      "learn": "GraphQL",
+      "description": "Books",
+      "id": 3
+    },
+    {
+      "learn": "Typescript",
+      "description": "books",
+      "id": 4
+    }
+  ],
+  "users": []
+}
