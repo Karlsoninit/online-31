@@ -1,0 +1,8 @@
+export const SET_TODO = "SET_TODO";
+export const ADD_TODO = "ADD_TODO";
+export const DELETE_TODO = "DELETE_TODO";
+export const UPDATE_TODO = "UPDATE_TODO";
+export const TODO_FETCH_START = "TODO_FETCH_START";
+export const TODO_FETCH_FINISHED = "TODO_FETCH_FINISHED";
+export const TODO_FETCH_ERROR = "TODO_FETCH_ERROR";
+export const TODO_FETCH_ERROR_CLEAN = "TODO_FETCH_ERROR_CLEAN";
