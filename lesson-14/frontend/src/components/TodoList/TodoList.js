@@ -1,18 +1,30 @@
 import React, { useContext, useEffect } from "react";
 import { PlanningCard } from "../../ui/PlanningCard/PlanningCard";
 import { useSelector, useDispatch } from "react-redux";
-import { getTodoOperation } from "../../redux/actions/todoAction";
-import { getTasks, sortedTask } from "../../redux/selector";
+import {
+  todos,
+  todoError,
+  todoLoader,
+  sortedTodos,
+} from "../../redux/selector";
+import { getTodos } from "../../redux/slices/todoSlice";
 
 export const TodoList = () => {
-  const { items, loader, error } = useSelector((state) => state.todo);
+  // const items = useSelector((state) => state.todos.items);
+  // const loader = useSelector((state) => state.todos.loader);
+  // const error = useSelector((state) => state.todos.error);
+
+  const items = useSelector((state) => sortedTodos(state));
+  const loader = useSelector((state) => todoLoader(state));
+  const error = useSelector((state) => todoError(state));
+
   const dispatch = useDispatch();
   // const a = useSelector((state) => getTasks(state));
   // const sorted = useSelector((state) => sortedTask(state));
   // console.log(`sorted`, sorted);
 
   useEffect(() => {
-    dispatch(getTodoOperation());
+    dispatch(getTodos());
   }, [dispatch]);
 
   if (loader) {

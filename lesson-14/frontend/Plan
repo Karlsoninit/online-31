@@ -1,0 +1,8 @@
+1) Устновить  @reduxjs/toolkit
+2) import { configureStore } from "@reduxjs/toolkit";
+3) export const store = configureStore({
+  reducer: rootReducer,
+});
+4) Настроить девтулз   devTools: process.env.NODE_ENV === "development",
+5) 
+

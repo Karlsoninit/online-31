@@ -2,10 +2,8 @@ import React, { useState, useContext } from "react";
 import { Input } from "../../ui/Input/Input";
 import { SubmitButton } from "../../ui/SubmitButton/SubmitButton";
 import { Form, InputBox } from "./TodoForm.styles";
-import { v4 as uuid } from "uuid";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, postTodoOperation } from "../../redux/actions/todoAction";
-
+import { addTodo, createTodo } from "../../redux/slices/todoSlice";
 export const TodoForm = () => {
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todo);
@@ -18,7 +16,7 @@ export const TodoForm = () => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    dispatch(postTodoOperation(todo));
+    dispatch(createTodo(todo));
   };
 
   const handleChange = (event) => {

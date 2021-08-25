@@ -25,9 +25,9 @@ const middleware = [
 ];
 
 const authPersistConfig = {
-  key: "auth",
+  key: "todo",
   storage,
-  whitelist: ["token"],
+  whitelist: ["items"],
 };
 
 const store = configureStore({
